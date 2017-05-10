@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "babel --presets=env src/index.js --out-file dist/happyfocus.js --source-maps",
     "watch": "babel --watch --presets=env src/index.js --out-file dist/happyfocus.js --source-maps",
-    "build": "npm run dev && uglifyjs dist/happyfocus.js -o dist/happyfocus.min.js",
+    "build": "npm run dev && prepack dist/happyfocus.js  --out dist/happyfocus.prepack.js && uglifyjs dist/happyfocus.prepack.js -o dist/happyfocus.min.js && rm dist/happyfocus.prepack.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "http-server -g",
     "prettier": "prettier --single-quote --write src/*.js"
@@ -35,6 +35,7 @@
     "babel-cli": "^6.24.1",
     "babel-preset-env": "^1.4.0",
     "http-server": "^0.10.0",
+    "prepack": "^0.2.1",
     "prettier": "^1.3.1",
     "uglify-js": "^3.0.3"
   }
