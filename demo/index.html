@@ -19,68 +19,68 @@ button:focus {
 }
 </style>
 
-<h1>Testing the Happy Focus JS</h1>
-<p>
-  The <code>focus</code> state and its styles will show and retain
-  <strong>on click </strong> in current <strong>Chrome</strong>
-  versions (up to version 58) or <strong>IE >= 9</strong> once you
-  style buttons or inputs away from their defaults. In IE9
-  specifically, default <code>:focus</code> styles even when not
-  applying custom styles. <em>Information last updated may 2017</em>.
-</p>
-<p>
-  Try below. The red border (or any other style you give it) is
-  visible in these browsers on click as well as when using the
-  keyboard to navigate.
-</p>
+  <h1>Testing the Happy Focus JS</h1>
+  <p>
+    The <code>focus</code> state and its styles will show and retain
+    <strong>on click </strong> in current <strong>Chrome</strong>
+    versions (up to version 58) or <strong>IE >= 9</strong> once you
+    style buttons or inputs away from their defaults. In IE9
+    specifically, default <code>:focus</code> styles even when not
+    applying custom styles. <em>Information last updated may 2017</em>.
+  </p>
+  <p>
+    Try below. The red border (or any other style you give it) is
+    visible in these browsers on click as well as when using the
+    keyboard to navigate.
+  </p>
 
-<section class="not-so-happy-focus">
-  <h2>Scenario without Happy Focus</h2>
+  <section class="not-so-happy-focus">
+    <h2>Scenario without Happy Focus</h2>
 
-  <div>
-    <button type="button">Button type=button</button>
-    <button type="submit">Button type=submit</button>
-  </div>
+    <div>
+      <button type="button">Button type=button</button>
+      <button type="submit">Button type=submit</button>
+    </div>
 
-  <div>
-    <input type="submit" value="Input type=submit">
-  </div>
+    <div>
+      <input type="submit" value="Input type=submit">
+    </div>
 
-  <div>
-    <input type="checkbox" value="test-checkbox1" id="test-checkbox1"><label for="test-checkbox1">Test checkbox 1</label>
-    <input type="checkbox" value="test-checkbox2" id="test-checkbox2"><label for="test-checkbox2">Test checkbox 2</label>
-  </div>
-  <div>
-    <input type="radio" value="test-radio1" id="test-radio1" name="radio"><label for="test-radio1">Test radio 1</label>
-    <input type="radio" value="test-radio2" id="test-radio2" name="radio"><label for="test-radio2">Test radio 2</label>
-  </div>
-</section>
+    <div>
+      <input type="checkbox" value="test-checkbox1" id="test-checkbox1"><label for="test-checkbox1">Test checkbox 1</label>
+      <input type="checkbox" value="test-checkbox2" id="test-checkbox2"><label for="test-checkbox2">Test checkbox 2</label>
+    </div>
+    <div>
+      <input type="radio" value="test-radio1" id="test-radio1" name="radio"><label for="test-radio1">Test radio 1</label>
+      <input type="radio" value="test-radio2" id="test-radio2" name="radio"><label for="test-radio2">Test radio 2</label>
+    </div>
+  </section>
 
-<section class="really-happy-focus">
-  <h2>Scenario with Happy Focus</h2>
+  <section class="really-happy-focus">
+    <h2>Scenario with Happy Focus</h2>
 
-  <div>
-    <button type="button">Button type=button</button>
-    <button type="submit">Button type=submit</button>
-  </div>
+    <div>
+      <button type="button">Button type=button</button>
+      <button type="submit">Button type=submit</button>
+    </div>
 
-  <div>
-    <input type="submit" value="Input type=submit">
-  </div>
+    <div>
+      <input type="submit" value="Input type=submit">
+    </div>
 
-  <div>
-    <input type="checkbox" value="test-checkbox3" id="test-checkbox3"><label for="test-checkbox3">Test checkbox 3</label>
-    <input type="checkbox" value="test-checkbox4" id="test-checkbox4"><label for="test-checkbox4">Test checkbox 4</label>
-  </div>
-  <div>
-    <input type="radio" value="test-radio3" id="test-radio3" name="radio"><label for="test-radio3">Test radio 3</label>
-    <input type="radio" value="test-radio4" id="test-radio4" name="radio"><label for="test-radio4">Test radio 4</label>
-  </div>
-</section>
+    <div>
+      <input type="checkbox" value="test-checkbox3" id="test-checkbox3"><label for="test-checkbox3">Test checkbox 3</label>
+      <input type="checkbox" value="test-checkbox4" id="test-checkbox4"><label for="test-checkbox4">Test checkbox 4</label>
+    </div>
+    <div>
+      <input type="radio" value="test-radio3" id="test-radio3" name="radio"><label for="test-radio3">Test radio 3</label>
+      <input type="radio" value="test-radio4" id="test-radio4" name="radio"><label for="test-radio4">Test radio 4</label>
+    </div>
+  </section>
 
-<script src="/dist/happyfocus.js"></script>
-<script>
-  var test = new HappyFocus('.really-happy-focus input, .really-happy-focus button');
-</script>
+  <script src="/dist/happyfocus.min.js"></script>
+  <script>
+  var happy = new HappyFocus('.really-happy-focus input, .really-happy-focus button');
+  </script>
 </body>
 </html>
