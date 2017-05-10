@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+body,
+head {
+  padding: 20px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+.editableStyle {
+  display: block;
+  white-space: pre;
+  font-family: monospace;
+}
+
+.editableStyle:before,
+.editableStyle:after {
+  display: block;
+  color: gray;
+}
+
+.editableStyle::before {
+  content: '<style contenteditable>';
+}
+
+.editableStyle::after {
+  content: '</style>';
+}
