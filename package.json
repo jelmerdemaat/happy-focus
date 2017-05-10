@@ -1,6 +1,6 @@
 {
   "name": "happy-focus",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Make browsers responsibly lose focus when the user is clicking inputs",
   "main": "dist/happyfocus.js",
   "files": [
