@@ -11,7 +11,7 @@
     "dev": "babel --presets=env src/index.js --out-file dist/happyfocus.js --source-maps",
     "watch": "babel --watch --presets=env src/index.js --out-file dist/happyfocus.js --source-maps",
     "build": "npm run prettier && npm run dev && npm run prepack && npm run uglify && npm run prepack-rm && npm run docs",
-    "docs": "cp dist/happyfocus.min.js docs/dist/happyfocus.min.js",
+    "docs": "cp dist/happyfocus.min.js docs/happyfocus.min.js",
     "uglify": "uglifyjs dist/happyfocus.prepack.js -o dist/happyfocus.min.js",
     "prepack": "prepack dist/happyfocus.js  --out dist/happyfocus.prepack.js",
     "prepack-rm": "rm dist/happyfocus.prepack.js",
