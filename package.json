@@ -17,6 +17,7 @@
     "prepack-rm": "rm dist/happyfocus.prepack.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "http-server -g",
+    "serve-docs": "http-server ./docs -g",
     "prettier": "prettier --single-quote --write src/*.js"
   },
   "repository": {
