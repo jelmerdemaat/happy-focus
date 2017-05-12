@@ -1,5 +1,7 @@
 # Happy focus
 
+> Make Chrome and IE responsibly lose focus when the user is clicking inputs
+
 Once you style `button`s or `input`s away from their defaults, the `:focus` state and its styles will show and retain **on click** in all recent Chrome versions or IE >= 9. In IE9 specifically, default `:focus` styles even show when not applying custom styles. And then your designer will complain about this. :wink:
 
 ## Solution
