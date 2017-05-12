@@ -30,8 +30,10 @@ npm install --save happy-focus
 In your JavaScript:
 
 ```js
+// When using an npm based build process, import the module:
 import HappyFocus from 'happy-focus';
 
+// Create an instance of HappyFocus
 const happyfocus = new HappyFocus();
 
 // Optionally, pass a querySelectorAll string
