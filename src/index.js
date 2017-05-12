@@ -1,5 +1,15 @@
 'use strict';
 
+// Prefix the Element.matches() method for older browsers (old Edge, IE11,
+// Android Browser)
+Element.prototype.matches =
+  Element.prototype.matches ||
+  Element.prototype.matchesSelector ||
+  Element.prototype.mozMatchesSelector ||
+  Element.prototype.msMatchesSelector ||
+  Element.prototype.oMatchesSelector ||
+  Element.prototype.webkitMatchesSelector;
+
 class HappyFocus {
   constructor(elements) {
     if (elements && typeof elements !== 'string') {
@@ -21,14 +31,16 @@ class HappyFocus {
   }
 
   attachHandlers() {
-    [].slice.call(document.querySelectorAll(this.elements)).forEach(input => {
-      input.addEventListener('click', this.onClick, false);
-      input.addEventListener('keydown', this.onClick, false);
-    });
+    document.addEventListener('click', this.onClick, false);
+    document.addEventListener('keydown', this.onClick, false);
   }
 
   onClick(evt) {
-    if (evt.type === 'click' && this.prevEventType !== 'keydown') {
+    if (
+      evt.target.matches(this.elements) &&
+      evt.type === 'click' &&
+      this.prevEventType !== 'keydown'
+    ) {
       requestAnimationFrame(() => {
         evt.target.blur();
       });

@@ -1,8 +1,13 @@
 'use strict';
 
+// Prefix the Element.matches() method for older browsers (old Edge, IE11,
+// Android Browser)
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+Element.prototype.matches = Element.prototype.matches || Element.prototype.matchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector || Element.prototype.oMatchesSelector || Element.prototype.webkitMatchesSelector;
 
 var HappyFocus = function () {
   function HappyFocus(elements) {
@@ -24,17 +29,13 @@ var HappyFocus = function () {
   _createClass(HappyFocus, [{
     key: 'attachHandlers',
     value: function attachHandlers() {
-      var _this = this;
-
-      [].slice.call(document.querySelectorAll(this.elements)).forEach(function (input) {
-        input.addEventListener('click', _this.onClick, false);
-        input.addEventListener('keydown', _this.onClick, false);
-      });
+      document.addEventListener('click', this.onClick, false);
+      document.addEventListener('keydown', this.onClick, false);
     }
   }, {
     key: 'onClick',
     value: function onClick(evt) {
-      if (evt.type === 'click' && this.prevEventType !== 'keydown') {
+      if (evt.target.matches(this.elements) && evt.type === 'click' && this.prevEventType !== 'keydown') {
         requestAnimationFrame(function () {
           evt.target.blur();
         });

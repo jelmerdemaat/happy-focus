@@ -55,10 +55,12 @@ const customhappyfocus = new HappyFocus([
 When using the keyboard, all normal focussing and blurring functionality is retained. Yeay for keyboard users! :heart:
 
 ## Browser support
-This little script (1.6K minified, 752B gzipped) is supported in all browsers that support `document.querySelectorAll` and `requestAnimationFrame`. Which is a lot: [caniuse.com/#feat=requestanimationframe,queryselector](https://caniuse.com/#feat=requestanimationframe,queryselector)
+This little script (1.8K minified, 739B gzipped) is supported in all browsers that support `Element.matches()` (either prefixed or not) and `requestAnimationFrame`. Which is a lot: [caniuse.com/#feat=matchesselector,queryselector](https://caniuse.com/#feat=matchesselector,queryselector)
 
-### querySelectorAll
-![querySelectorAll support](http://i.imgur.com/2haAkyy.png)
+Can I Use screenshots:
 
-### requestAnimationFrame
-![requestAnimationFrame](http://i.imgur.com/QHDgRhr.png)
+### matches()
+![Element.matches support](http://i.imgur.com/FuR0x2G.png)
+
+### requestAnimationFrame()
+![requestAnimationFrame support](http://i.imgur.com/QHDgRhr.png)

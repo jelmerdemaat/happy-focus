@@ -10,9 +10,11 @@
   "scripts": {
     "dev": "babel --presets=env src/index.js --out-file dist/happyfocus.js --source-maps",
     "watch": "babel --watch --presets=env src/index.js --out-file dist/happyfocus.js --source-maps",
-    "build": "npm run prettier && npm run dev && npm run prepack && npm run uglify && npm run prepack-rm && npm run docs",
+    "build": "npm run prettier && npm run dev && npm run uglify && npm run gzip && npm run docs",
     "docs": "cp dist/happyfocus.min.js docs/happyfocus.min.js",
-    "uglify": "uglifyjs dist/happyfocus.prepack.js -o dist/happyfocus.min.js",
+    "gzip": "gzip -9c dist/happyfocus.min.js > dist/happyfocus.min.js.gz",
+    "uglify": "uglifyjs dist/happyfocus.js -o dist/happyfocus.min.js",
+    "uglify-pp": "uglifyjs dist/happyfocus.prepack.js -o dist/happyfocus.min.js",
     "prepack": "prepack dist/happyfocus.js  --out dist/happyfocus.prepack.js",
     "prepack-rm": "rm dist/happyfocus.prepack.js",
     "test": "echo \"Error: no test specified\" && exit 1",
