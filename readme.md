@@ -15,9 +15,36 @@ keyboard to navigate. In the second example, this behaviour is responsibly fixed
   3. Wait one `requestAnimationFrame`, needed to correctly `blur()` in Chrome
   2. `blur()` the currently clicked element
 
+## Install
+### Directly
+Include `happyfocus(.min).js` somewhere  in your document, before the rest of your JavaScript where you initiate this script.
+
+### Via npm
+```sh
+npm install --save happy-focus
+```
+
+## Usage
+In your JavaScript:
+
+```js
+import HappyFocus from 'happy-focus';
+
+const happyfocus = new HappyFocus();
+
+// Optionally, pass a querySelectorAll string
+// or array of querySelectorAll strings
+
+const customhappyfocus = new HappyFocus([
+  'input[type="submit"]',
+  'button'
+]);
+
+// Done!
+```
+
 ## Accessibility
 When using the keyboard, all normal focussing and blurring functionality is retained. Yeay for keyboard users! :heart:
-
 
 ## Browser support
 This little script (1.6K minified, 752B gzipped) is supported in all browsers that support `document.querySelectorAll` and `requestAnimationFrame`. Which is a lot: [caniuse.com/#feat=requestanimationframe,queryselector](https://caniuse.com/#feat=requestanimationframe,queryselector)
