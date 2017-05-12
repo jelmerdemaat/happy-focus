@@ -8,6 +8,10 @@ Once you style `button`s or `input`s away from their defaults, the `:focus` stat
 
 **Happy focus!** :sunglasses:
 
+_A small script that responsibly removes focus after a click._
+
+[GitHub](https://github.com/jelmerdemaat/happy-focus) | [NPM](https://www.npmjs.com/package/happy-focus) | [@jelmerdemaat](https://twitter.com/jelmerdemaat)
+
 Try here: [jelmerdemaat.github.io/happy-focus](https://jelmerdemaat.github.io/happy-focus/). In the first example the red border (or any other style you give it) is
 visible in said browsers on click as well as when using the
 keyboard to navigate. In the second example, this behaviour is responsibly fixed:
