@@ -55,7 +55,7 @@ const customhappyfocus = new HappyFocus([
 When using the keyboard, all normal focussing and blurring functionality is retained. Yeay for keyboard users! :heart:
 
 ## Browser support
-This little script (1.8K minified, 739B gzipped) is supported in all browsers that support `Element.matches()` (either prefixed or not) and `requestAnimationFrame`. Which is a lot: [caniuse.com/#feat=matchesselector,queryselector](https://caniuse.com/#feat=matchesselector,queryselector)
+This little script (874B minified, 406B gzipped) is supported in all browsers that support `Element.matches()` (either prefixed or not) and `requestAnimationFrame`. Which is a lot: [caniuse.com/#feat=matchesselector,queryselector](https://caniuse.com/#feat=matchesselector,queryselector)
 
 Can I Use screenshots:
 
