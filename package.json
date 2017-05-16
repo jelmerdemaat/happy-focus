@@ -10,8 +10,8 @@
   "scripts": {
     "build": "npm run prettier && npm run uglify && npm run docs",
     "docs": "cp dist/happyfocus.min.js docs/happyfocus.min.js",
-    "uglify": "uglifyjs src/index.js -o dist/happyfocus.min.js --compress --mangle toplevel",
-    "prepack": "echo \"Error: does not work yet\" && exit 1 # prepack src/index.js --out dist/happyfocus.prepack.js",
+    "uglify": "uglifyjs src/happyfocus.js -o dist/happyfocus.min.js --compress --mangle toplevel",
+    "prepack": "echo \"Error: does not work yet\" && exit 1 # prepack src/happyfocus.js --out dist/happyfocus.prepack.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "http-server -g",
     "serve-docs": "http-server ./docs -g",
@@ -25,10 +25,13 @@
     "focus",
     "click",
     "happy",
-    "blur"
+    "blur",
+    "outline",
+    "css",
+    "accessibility"
   ],
   "author": "Jelmer de Maat <post@jelmerdemaat.nl> (https://github.com/jelmerdemaat)",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/jelmerdemaat/happy-focus/issues"
   },
