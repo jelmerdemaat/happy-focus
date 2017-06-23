@@ -41,10 +41,12 @@ import HappyFocus from 'happy-focus';
 const happyfocus = new HappyFocus();
 
 // Optionally, pass a querySelectorAll string
-// or array of querySelectorAll strings
+// or array of querySelectorAll strings.
+// Defaults to:
+//   'input[type="radio"], input[type="checkbox"], button:not([type="submit"])';
 
 const customhappyfocus = new HappyFocus([
-  'input[type="submit"]',
+  'input[type="checkbox"]',
   'button'
 ]);
 
@@ -53,6 +55,8 @@ const customhappyfocus = new HappyFocus([
 
 ## Accessibility
 When using the keyboard, all normal focussing and blurring functionality is retained. Yeay for keyboard users! :heart:
+
+It is advised **not** the use this script on `type="submit"` inputs or buttons, as it breaks native form validation.
 
 ## Browser support
 This little script (874B minified, 406B gzipped) is supported in all browsers that support `Element.matches()` (either prefixed or not) and `requestAnimationFrame`. Which is a lot: [caniuse.com/#feat=matchesselector,queryselector](https://caniuse.com/#feat=matchesselector,queryselector)

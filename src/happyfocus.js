@@ -24,8 +24,7 @@ function HappyFocus(elements) {
     elements ||
     'input[type="radio"],' +
       'input[type="checkbox"],' +
-      'input[type="submit"],' +
-      'button';
+      'button:not([type="submit"])';
 
   this.prevEventType = 'click';
 

@@ -47,6 +47,8 @@ button:focus {
     keyboard to navigate.
   </p>
 
+  <p>It is advised <strong>not</strong> the use this script on `type="submit"` inputs or buttons, as it breaks native form validation.</p>
+
   <section class="not-so-happy-focus">
     <h2>Scenario without Happy Focus</h2>
 
@@ -74,11 +76,11 @@ button:focus {
 
     <div>
       <button type="button">Button type=button</button>
-      <button type="submit">Button type=submit</button>
+      <button type="submit">Button type=submit (should not be affected because of form validation)</button>
     </div>
 
     <div>
-      <input type="submit" value="Input type=submit">
+      <input type="submit" value="Input type=submit (should not be affected because of form validation)">
     </div>
 
     <div>
@@ -93,7 +95,7 @@ button:focus {
 
   <script src="happyfocus.min.js"></script>
   <script>
-  var happy = new HappyFocus('.really-happy-focus input, .really-happy-focus button');
+  var happy = new HappyFocus('.really-happy-focus input:not([type="submit"]), .really-happy-focus button:not([type="submit"])');
   </script>
 </body>
 </html>
