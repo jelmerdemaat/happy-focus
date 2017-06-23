@@ -59,7 +59,7 @@ When using the keyboard, all normal focussing and blurring functionality is reta
 It is advised **not** the use this script on `type="submit"` inputs or buttons, as it breaks native form validation.
 
 ## Browser support
-This little script (874B minified, 406B gzipped) is supported in all browsers that support `Element.matches()` (either prefixed or not) and `requestAnimationFrame`. Which is a lot: [caniuse.com/#feat=matchesselector,queryselector](https://caniuse.com/#feat=matchesselector,queryselector)
+This little script (888B minified, 416B gzipped) is supported in all browsers that support `Element.matches()` (either prefixed or not) and `requestAnimationFrame`. Which is a lot: [caniuse.com/#feat=matchesselector,queryselector](https://caniuse.com/#feat=matchesselector,queryselector)
 
 Can I Use screenshots:
 
