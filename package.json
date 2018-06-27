@@ -1,6 +1,6 @@
 {
   "name": "happy-focus",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "description": "Make browsers responsibly lose focus when the user is clicking inputs",
   "main": "build/happy-focus.js",
   "umd:main": "build/happy-focus.umd.js",
