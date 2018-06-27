@@ -2,4 +2,3 @@ node_modules/
 *.js.map
 npm-debug.log
 *.gz
-package-lock.json
