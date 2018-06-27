@@ -2,19 +2,14 @@
   "name": "happy-focus",
   "version": "0.2.3",
   "description": "Make browsers responsibly lose focus when the user is clicking inputs",
-  "main": "src/happyfocus.js",
-  "files": [
-    "src/happyfocus.js",
-    "dist/happyfocus.min.js"
-  ],
+  "main": "build/happy-focus.js",
+  "umd:main": "build/happy-focus.umd.js",
+  "module": "build/happy-focus.m.js",
+  "source": "src/index.js",
   "scripts": {
-    "build": "npm run prettier && npm run uglify && npm run docs",
-    "docs": "cp dist/happyfocus.min.js docs/happyfocus.min.js",
-    "uglify": "uglifyjs src/happyfocus.js -o dist/happyfocus.min.js --compress --mangle toplevel",
-    "prepack": "echo \"Error: does not work yet\" && exit 1 # prepack src/happyfocus.js --out dist/happyfocus.prepack.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "http-server -g",
-    "serve-docs": "http-server ./docs -g",
+    "build": "npm run prettier && microbundle -i src -o build --sourcemap false && npm run docs",
+    "docs": "cp build/happy-focus.umd.js docs/happy-focus.umd.js",
+    "serve": "http-server ./docs -g",
     "prettier": "prettier --single-quote --write src/*.js"
   },
   "repository": {
@@ -38,8 +33,7 @@
   "homepage": "https://github.com/jelmerdemaat/happy-focus#readme",
   "devDependencies": {
     "http-server": "^0.10.0",
-    "prepack": "^0.2.1",
-    "prettier": "^1.3.1",
-    "uglify-js": "^3.0.3"
+    "microbundle": "^0.4.4",
+    "prettier": "^1.3.1"
   }
 }
