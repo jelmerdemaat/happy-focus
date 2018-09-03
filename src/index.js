@@ -58,7 +58,9 @@ class HappyFocus {
       requestAnimationFrame(() => {
         // Blur the current target. After this, the "tab" key still moves to
         // the next element in line (not the first in the document)
-        document.activeElement.blur();
+        if ('blur' in document.activeElement) {
+          document.activeElement.blur();
+        }
       });
     }
 
